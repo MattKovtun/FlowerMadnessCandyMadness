@@ -9,9 +9,9 @@ public class CandyLollipop extends Candy{
      */
 
     public CandyLollipop(double weight, long quantity) {
-        this.type = "Lollipop";
-        this.weight = weight;
-        this.quantity = quantity;
+        this.setType("Lollipop");
+        this.setWeight(weight);
+        this.setQuantity(quantity);
 
     }
 }

@@ -6,11 +6,11 @@ package FlowerMadness;
 public class FlowerTulips extends Flower{
 
     public FlowerTulips(String color, double length, Boolean fresh) {
-        this.type = "Tulip";
-        this.color = color;
-        this.length = length;
-        this.fresh = fresh;
-        this.price = 20;
+        this.setType("Tulip");
+        this.setColor(color);
+        this.setLength(length);
+        this.setFresh(fresh);
+        this.setPrice(20);
     }
 
 }

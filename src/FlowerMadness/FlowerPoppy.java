@@ -6,10 +6,10 @@ package FlowerMadness;
 public class FlowerPoppy extends Flower {
 
     public FlowerPoppy(double length, Boolean fresh) {
-        this.type = "Poppy";
-        this.color = "Red";
-        this.length = length;
-        this.fresh = fresh;
-        this.price = 10;
+        this.setType("Poppy");
+        this.setColor("Red");
+        this.setLength(length);
+        this.setFresh(fresh);
+        this.setPrice(10);
     }
 }
