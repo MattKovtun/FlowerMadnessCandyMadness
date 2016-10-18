@@ -3,57 +3,52 @@ package FlowerMadness;
 /**
  * Created by matt on 10/3/16.
  */
-public class Flower {
-    protected String color;
-    protected double length;
-    protected boolean fresh;
-    protected double price;
-    protected String type;
+abstract public class Flower {
+    protected FlowerSpec spec;
 
-
-    public String getType() {
-        return type;
+    public void setType(FlowerType type) {
+        spec.setType(type);
     }
 
-    public void setType(String type) {
-        this.type = type;
+    protected FlowerType getType() {
+        return spec.getType();
     }
 
 
-    
     public double getPrice() {
-        return price;
+        return spec.getPrice();
     }
 
     public void setPrice(double price) {
-        this.price = price;
+        spec.setPrice(price);
     }
-    
+
     public double getLength() {
-        return length;
+        return spec.getLength();
     }
 
     public void setLength(double length) {
-        this.length = length;
+        spec.setLength(length);
     }
 
-    public String getColor() {
-        return color;
+    public FlowerColor getColor() {
+        return spec.getColor();
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setColor(FlowerColor color) {
+        spec.setColor(color);
     }
 
     public boolean isFresh() {
-        return fresh;
+        return spec.isFresh();
     }
 
     public void setFresh(boolean fresh) {
-        this.fresh = fresh;
+        spec.setFresh(fresh);
     }
-    public String toString(){
-        return "Type: " + getType() + " price is " + String.valueOf(getPrice()) + " its color is " + getColor() + " fresh leve is " + String.valueOf(isFresh()) + " its height " + String.valueOf(getLength());
+
+    public String toString() {
+        return spec.toString();
     }
 
 }
