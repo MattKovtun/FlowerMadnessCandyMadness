@@ -1,5 +1,7 @@
 package FlowerMadness;
 
+import order.FlowerBucketDecorator;
+
 import java.util.Arrays;
 
 /**
@@ -38,7 +40,7 @@ public class FlowerMain {
         poppy2.setLength(228);
         bucket.addFlower(poppy2);
 
-//      System.out.println(FlowerColor.BLACK);
+
         System.out.println(bucket);
         System.out.println("Sorting by price...");
         bucket.sortByPrice();
@@ -59,7 +61,12 @@ public class FlowerMain {
         FlowerSpec TEST2 = new FlowerSpec();
         TEST2.setPrice(2);
         System.out.println(bucket.findFlowers(TEST2));
+        System.out.println();
 
+        System.out.println("Testing decorator ");
+        System.out.println("Total price of regular bucket is : " + bucket.getTotalPrice());
+        FlowerBucketDecorator VIPfb = new FlowerBucketDecorator(bucket);
+        System.out.println("Total price of the same bucket but for VIP clients is : " + VIPfb.getTotalPrice());
 
 
     }
